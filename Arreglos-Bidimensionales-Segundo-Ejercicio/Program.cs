@@ -34,6 +34,10 @@
 
             double mayorValor = matriz[0,0];
             double menorValor = matriz[0,0];
+            int filaMayor = 0;
+            int columnaMayor = 0;
+            int filaMenor = 0;
+            int columnaMenor = 0;
             for (int i = 0; i < filas; i++)
             {
                 for (int j = 0; j < columnas; j++)
@@ -41,14 +45,18 @@
                     if (matriz[i,j] > mayorValor)
                     {
                         mayorValor = matriz[i, j];
+                        filaMayor = i;
+                        columnaMayor = j;
                     }
                     if(matriz[i,j] < menorValor)
                     {
                         menorValor = matriz[i, j];
+                        filaMenor = i;
+                        columnaMenor = j;
                     }
                 } 
             }
-            Console.WriteLine($"MAYOR VALOR DENTRO DE LA MATRIZ: {mayorValor}\nMENOR VALOR DENTRO DE LA MATRIZ: {menorValor}");
+            Console.WriteLine($"MAYOR VALOR DENTRO DE LA MATRIZ: {mayorValor}, en la posición [{filaMayor}, {columnaMayor}]\nMENOR VALOR DENTRO DE LA MATRIZ: {menorValor}, en la posicion [{filaMenor}, {columnaMenor}]");
 
         }
     }
